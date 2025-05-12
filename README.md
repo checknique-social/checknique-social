@@ -1,11 +1,22 @@
-- 👋 Hi, I’m @checknique-social
+#👋 Hi, I’m @checknique-social
 Please add your contact information to this readme.md file
-scott@checknique.com
-andy@checknique.com
-scott.andreas@gmail.com
-text messaging:
-scott: 541-729-6090
-andy 435-760-5952
+##Sponsor Contact
+- scott@checknique.com
+- andy@checknique.com
+- scott.andreas@gmail.com
+
+Text messaging:
+- scott: 541-729-6090
+- andy 435-760-5952
+
+##Internship Team Contact
+- Thomas Lucas: luc20001@byui.edu   
+- Drew Steele: 
+- Dana Guerrero: 
+- William Hanford: 
+
+Text Messaging: 
+
 
 This Repository is for checknique website build source files
 
