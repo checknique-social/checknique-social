@@ -1,15 +1,15 @@
-#👋 Hi, I’m @checknique-social
+# 👋 Hi, I’m @checknique-social
 Please add your contact information to this readme.md file
-##Sponsor Contact
+## Sponsor Contact
 - scott@checknique.com
 - andy@checknique.com
 - scott.andreas@gmail.com
 
 Text messaging:
-- scott: 541-729-6090
-- andy 435-760-5952
+- Scott: 541-729-6090
+- Andy 435-760-5952
 
-##Internship Team Contact
+## Internship Team Contact
 - Thomas Lucas: luc20001@byui.edu   
 - Drew Steele: 
 - Dana Guerrero: 
