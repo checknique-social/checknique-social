@@ -11,7 +11,7 @@ Text messaging:
 
 ## Internship Team Contact
 - Thomas Lucas: luc20001@byui.edu   
-- Drew Steele: 
+- Drew Steele: ste20099@byui.edu
 - Dana Guerrero: 
 - William Hanford: will7332@byui.edu
 
