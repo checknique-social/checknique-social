@@ -13,7 +13,7 @@ Text messaging:
 - Thomas Lucas: luc20001@byui.edu   
 - Drew Steele: 
 - Dana Guerrero: 
-- William Hanford: 
+- William Hanford: will7332@byui.edu
 
 Text Messaging: 
 
