@@ -1,10 +1,37 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #000;
+    --text-light: #FFFFFF;
+    --primary-font: "Montserrat", "san-serif";
+    --secondary-font: Mooli, san-serif;
+    }
+
 body {
     margin: 0 auto;
     padding: 0;
 }
 
+button#menu-button {
+    text-decoration: none;
+    color: var(--text-dark);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size:  25px;
+    /* margin-left: auto; */
+    /* display: block; */
+    /* padding-right: 40px; */
+}
+
 header {
-    background-color: blue;
+    font-family: var(--primary-font);
+    background-color: #FFFFFF;
     color: white;
     padding: 1em;
     display: grid;
@@ -12,7 +39,40 @@ header {
 
 }
 
-header nav {
-    grid-column: 2;
+header img {
+    width: 205px;
+    height: 42px;
 }
 
+header nav {
+    display: none;
+    
+}
+
+header nav a {
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+@media (min-width: 750px) {
+
+    header{ 
+        align-items: right;
+    }
+
+    header nav{
+        display:flex;
+        grid-column: 3;
+        text-align: right;
+        gap: 50px;
+        align-items: center;
+        /* margin-right: 40px; */
+    }
+
+    button#menu-button {
+        display: none;
+    }
+
+
+}
