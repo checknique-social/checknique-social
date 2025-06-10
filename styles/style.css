@@ -18,15 +18,19 @@
 
   button#menu-button {
     text-decoration: none;
-    color: var(--text-dark);
+    color: black;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 25px;
+    width: 40px;
+    height: 40px;
     /* margin-left: auto; */
     /* display: block; */
     /* padding-right: 40px; */
   }
+
+  
 
   header {
     font-family: var(--primary-font);
@@ -242,6 +246,7 @@
       text-align: right;
       gap: 50px;
       align-items: center;
+      padding-right: 20px;
       /* margin-right: 40px; */
     }
 
@@ -278,4 +283,5 @@
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0.95);
   }
+  
 }
