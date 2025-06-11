@@ -61,7 +61,7 @@
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   /* Section Spacing */
@@ -233,6 +233,47 @@
   .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  footer {
+    color: white;
+    background-color: #7B7B7B;
+    display: grid;
+    grid-template-columns: 1fr 2fr .5fr;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+  }
+
+  footer nav{
+    justify-content: space-between;
+    display: flex;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-left: 2px solid white;
+    height: 79px;
+    align-items: center;
+  }
+
+  footer nav a{
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    color: white;
+    text-decoration: none;
+    
+  }
+
+  /* #vertical-line {
+    border-left: 1px solid white;
+    height: 79px;
+    grid-column: 1 / 2;
+  } */
+
+  #social-media{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
   }
 
   @media (min-width: 750px) {
