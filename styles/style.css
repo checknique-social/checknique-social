@@ -73,44 +73,6 @@
   }
 
   /* Hero Section */
-  /* .hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  }
-
-  .hero-card {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 600px;
-    width: 90%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-  } */
-
-  /* .hero .hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
- 
-  position: relative;
-  z-index: 0;
-} */
-
-/* .hero-card {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-} */
-
   .hero {
   position: relative;
   overflow: hidden;  /* ensure overlay doesn’t spill out */
@@ -179,7 +141,8 @@
 
 
   .user-type {
-  grid-column: 1 / 3;
+  color: var(--text-light);
+  grid-column: 1 / 2;
   grid-row:    2/3;
   z-index: 3;
   justify-self: center;
@@ -194,38 +157,31 @@
   }
 
   .user-buttons {
-    /* display: flex;
-    justify-content: center; */
-    gap: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 20px; */
+    margin: 10px;
+    margin-left: 175px;
     /* flex-wrap: wrap; */
   }
 
   .consumer-button,
   .business-button {
+    margin: 10px;
+    color: white;
+    background-color: #4caf50;
     padding: 12px 24px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
   }
 
-  .consumer-button {
-    background-color: #4caf50;
-    color: white;
-  }
-
-  .business-button {
-    background-color: #2196f3;
-    color: white;
-  }
-
-  .consumer-button:hover {
-    background-color: #45a049;
-  }
-
+  .consumer-button:hover, 
   .business-button:hover {
-    background-color: #1976d2;
+    background-color: #45a045;
   }
 
   /* About Section */
