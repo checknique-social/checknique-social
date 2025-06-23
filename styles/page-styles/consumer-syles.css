@@ -1,0 +1,26 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --checknique-color: #285fa1;
+    --text-dark: #000;
+    --text-light: #ffffff;
+    --primary-font: "Montserrat", "san-serif";
+    --secondary-font: Mooli, san-serif;
+}
+
+
+
+/* .problem-imgs img {
+    width: 50%;
+}
+
+#validate-img {
+    width: 50%;
+} */
+
+img {
+    width: 50%;
+}
