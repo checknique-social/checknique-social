@@ -11,16 +11,183 @@
     --secondary-font: Mooli, san-serif;
 }
 
-
-
-/* .problem-imgs img {
-    width: 50%;
+.consumer-hero {
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: left;
 }
 
-#validate-img {
-    width: 50%;
-} */
+/* Problem section */
 
-img {
-    width: 50%;
+.problem-section {
+    font-family: var(--primary-font);
+    padding: 40px;
+    
 }
+
+.problem-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.problem-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.problem-list ol {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.problem-imgs {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.problem-imgs img {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fraud-img {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#money-img {
+    top: 70px;
+    left: 45%;
+    z-index: 2;
+}
+
+/* Product Section */
+.product-section {
+  font-family: var(--primary-font);  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "text   icons";
+  gap: 30px;
+  align-items: start;
+  padding: 40px;
+}
+
+.product-section > h1 {
+  grid-area: header;
+  margin: 0;
+}
+
+.product-section > p {
+  grid-area: text;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.product-icons {
+  grid-area: icons;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-items: center; 
+  align-items: center;
+}
+
+.product-icons img,
+.product-icons .icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+/* How it works section */
+.how-it-works {
+    font-family: var(--primary-font);
+    background-color: var(--checknique-color);
+    color: var(--text-dark);
+    padding: 30px;
+}
+
+.how-it-works .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* text | image */
+  gap: 30px;                      /* space between columns */
+  align-items: center;            /* vertical centering */
+  padding: 30px;
+  margin-bottom: 40px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Text side */
+.card-text h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.card-text p {
+  line-height: 1.6;
+  margin: 0.5em 0 0;
+}
+
+/* Image side */
+.card-image img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+
+/* Benefits section */
+.benefit-header {
+    font-family: var(--primary-font);
+    text-align: center;
+}
+
+.benefits-section {
+  font-family: var(--primary-font);  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  gap: 30px;
+  padding: 40px;
+}
+
+.benefits-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push image to bottom */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  min-height: 300px; /* ensure cards are all the same height */
+  text-align: center;
+}
+
+.benefits-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.benefits-section p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.benefits-section img {
+  width: 75%;      /* adjust as needed */
+  height: 100%;
+  align-self: center;
+}
+
+
