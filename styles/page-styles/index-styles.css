@@ -19,7 +19,7 @@
   box-sizing: border-box;
  
 
-  button#menu-button {
+  #menu-button {
     text-decoration: none;
     color: black;
     background: none;
@@ -32,30 +32,47 @@
     /* display: block; */
     /* padding-right: 40px; */
   }
-
-  
-
+   /* CSS Document */
   header {
     font-family: var(--primary-font);
     background-color: #ffffff;
     color: white;
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   header img {
     width: 205px;
     height: 42px;
+    margin-left: 45px;
   }
 
   header nav {
-    display: none;
-  }
+      display: flex;
+      grid-column: 2/ 4;
+      text-align: right;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-right: 20px;
+      /* margin-right: 40px; */
+    }
+
+   button#menu-button {
+      display: none;
+    }
 
   header nav a {
     color: #000000;
     text-decoration: none;
+    color: #000;
+    text-align: center;
+    /* Paragraph/Small */
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 
   body {
@@ -316,29 +333,37 @@
     justify-content: center;
     gap: 10%;
   }
-
-  @media (min-width: 750px) {
-    header {
-      align-items: right;
-    }
-
-    header nav {
-      display: flex;
-      grid-column: 3;
-      text-align: right;
-      gap: 50px;
-      align-items: center;
-      padding-right: 20px;
-      /* margin-right: 40px; */
-    }
-
-    button#menu-button {
-      display: none;
-    }
-  }
 }
 
 @media (max-width: 750px) {
+  header{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+   header nav {
+    display: none;
+  }
+
+  button#menu-button {
+    text-decoration: none;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    grid-column: 1/ 2;
+    grid-row: 1 / 2;
+  }
+
+  header img {
+    grid-column: 2 / 3;
+    justify-self: right;
+  }
+
   .hero h1 {
     font-size: 1.5rem;
   }
@@ -390,9 +415,9 @@
   }
 
   .features-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .user-type {
