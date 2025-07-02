@@ -163,6 +163,13 @@
 
 
 /* How it works section */
+#how-it-works-header {
+  color: var(--text-light);
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+}
+
 .how-it-works {
     font-family: var(--primary-font);
     background-color: var(--checknique-color);
@@ -179,6 +186,22 @@
   margin-bottom: 40px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.scan-card,
+.register-card {
+  display: flex;             /* switch these two into flex layout */
+  align-items: center;       /* vertical center */
+  gap: 30px;                 /* same gutter you had on grid */
+}
+
+.scan-card .card-text,
+.register-card .card-text {
+  order: 1;
+}
+.scan-card .card-image,
+.register-card .card-image {
+  order: 2;
 }
 
 /* Text side */
