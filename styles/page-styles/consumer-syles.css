@@ -11,11 +11,61 @@
     --secondary-font: Mooli, san-serif;
 }
 
+
+/* Hero section */
+
 .consumer-hero {
-    font-family: var(--primary-font);
-    display: flex;
-    justify-content: left;
+  font-family: var(--primary-font);
+  position: relative;      
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
+
+#consumer-hero-img {
+  flex: 1 1 auto;        
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.consumer-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--checknique-color),
+    rgba(89, 195, 195, 0.2)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.consumer-hero-card {
+  position: absolute;     
+  top: 40%;
+  left: 2rem;             
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  color: #fff;
+}
+
+.consumer-hero-card h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.consumer-hero-card p {
+  font-size: 18px;
+}
+
 
 /* Problem section */
 
@@ -188,6 +238,75 @@
   width: 75%;      /* adjust as needed */
   height: 100%;
   align-self: center;
+}
+
+
+/* Media query */ 
+@media (max-width: 750px) {
+  .problem-content {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-imgs img {
+    width: 50%;
+
+  }
+
+  .problem-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    margin-top: 20px;
+  }
+
+  .problem-list {
+    background-color: var(--checknique-color);
+    color: var(--text-light);
+  }
+
+  #money-img {
+    top: 0;
+    /* left: 0; */
+  }
+
+  
+  .product-section {
+    display: grid;
+    grid-template-columns: 1fr;               
+    grid-template-areas:
+      "header"
+      "text"
+      "icons";                                
+    gap: 20px;
+    padding: 20px;                        
+  }
+
+  .product-section > h1 {
+    grid-area: header;
+    margin: 0;
+  }
+
+  .product-section > p {
+    grid-area: text;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .product-icons {
+    grid-area: icons;
+    display: grid;
+    /* switch to fewer columns so icons aren’t tiny */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .product-icons img,
+  .product-icons .icon {
+    width: 50px;    /* scale down for mobile */
+    height: auto;
+  }
 }
 
 
