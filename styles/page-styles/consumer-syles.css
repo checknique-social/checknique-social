@@ -257,13 +257,7 @@
   margin-top: auto;
 }
 
-.benefit-card {
-  grid-column: 1/2;
-}
 
-.engagement-card {
-  grid-column: 2/3;
-}
 
 /* Media query */ 
 @media (max-width: 750px) {
