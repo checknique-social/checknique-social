@@ -179,30 +179,23 @@
 
 .how-it-works .card {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* text | image */
-  gap: 30px;                      /* space between columns */
-  align-items: center;            /* vertical centering */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   padding: 30px;
   margin-bottom: 40px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-.scan-card,
-.register-card {
-  display: flex;             /* switch these two into flex layout */
-  align-items: center;       /* vertical center */
-  gap: 30px;                 /* same gutter you had on grid */
+#scan-card-img, #register-img {
+  align-self: end;
+  justify-self: end;
 }
 
-.scan-card .card-text,
-.register-card .card-text {
-  order: 1;
+.carousel-controls {
+  display: none;
 }
-.scan-card .card-image,
-.register-card .card-image {
-  order: 2;
-}
+
 
 /* Text side */
 .card-text h1 {
@@ -231,7 +224,7 @@
 .benefits-section {
   font-family: var(--primary-font);  
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
   padding: 40px;
 }
@@ -239,11 +232,11 @@
 .benefits-section > div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push image to bottom */
+  /* justify-content: space-between;  */
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   padding: 20px;
-  min-height: 300px; /* ensure cards are all the same height */
+  min-height: 300px; 
   text-align: center;
 }
 
@@ -261,8 +254,16 @@
   width: 75%;      /* adjust as needed */
   height: 100%;
   align-self: center;
+  margin-top: auto;
 }
 
+.benefit-card {
+  grid-column: 1/2;
+}
+
+.engagement-card {
+  grid-column: 2/3;
+}
 
 /* Media query */ 
 @media (max-width: 750px) {
@@ -329,6 +330,53 @@
   .product-icons .icon {
     width: 50px;    /* scale down for mobile */
     height: auto;
+  }
+
+  
+
+  .slides-container {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    /* remove bottom margin so cards butt up flush */
+  }
+
+  /* each card fills 100% of the viewport width */
+  .slides-container > .card {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+  }
+
+  #scan-card-img, #validate-img, #register-img{
+    align-self: center;
+    justify-self: center;
+  }
+
+  .slides-container > .card .card-image {
+    order: 1;
+  }
+
+  /* show the controls */
+  .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .carousel-btn {
+    background: var(--checknique-color);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,1);
+    cursor: pointer;
   }
 }
 
