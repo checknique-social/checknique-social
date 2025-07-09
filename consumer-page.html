@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="js/carousel.js"></script>
     <title>Consumers</title>
 </head>
 <body>
@@ -77,55 +78,71 @@
         
         <section class="how-it-works">
             <h1 id="how-it-works-header">How does it work?</h1>
-            <div class="company-verification card">
-                <div class="card-text">
-                    <h1>Scan</h1>
-                    <p>Use your smartphone to open the Checknique app and scan the QR code found on the product’s label or packaging. Each product has a unique digital signature, like a fingerprint, that connects to Checknique’s secure database.</p>
+            
+            <div class="slides-container">
+                <div class="scan-card card">
+                    <div class="card-text">
+                        <h1>Scan</h1>
+                        <p>Use your smartphone to open the Checknique app and scan the QR code found on the product’s label or packaging. Each product has a unique digital signature, like a fingerprint, that connects to Checknique’s secure database.</p>
+                    </div>
+                    <div class="card-image">
+                        <img id="scan-card-img" src="images/scan-card-img.jpg" alt="picture of a phone scanning a QR code">
+                    </div>    
                 </div>
-                <div class="card-image">
-                    <img id="company-verification-img" src="images/scan-card-img.jpg" alt="picture of a phone scanning a QR code">
-                </div>    
+                <div class="validate-card card">
+                    <div class="card-image">
+                        <img id="validate-img" src="images/validate-img.jpg" alt="Picture of a person holding a phone">
+                    </div>
+                    <div class="card-text">    
+                        <h1>Validate</h1>
+                        <p>In seconds, the app confirms whether the product is authentic or fake using Checknique’s dual-key QR system. This process is powered by a patent-pending technology that checks for duplicates, scan history, and geographic anomalies.</p>
+                    </div>
+                </div>
+                <div class="register-card card">
+                    <div class="card-text">
+                        <h1>Register</h1>
+                        <p>Once verified, register the product in your name with one tap. This gives you digital proof of ownership and access to exclusive rewards, product updates, sales alerts, and more.</p>
+                    </div>
+                    <div class="card-image">
+                        <img id="register-img" src="images/register-card-img.jpg" alt="Picture of someone typing on a phone">
+                    </div>
+                </div>
             </div>
-            <div class="validate-card card">
-                <div class="card-image">
-                    <img id="validate-img" src="images/validate-img.jpg" alt="Picture of a person holding a phone">
-                </div>
-                <div class="card-text">    
-                    <h1>Validate</h1>
-                    <p>In seconds, the app confirms whether the product is authentic or fake using Checknique’s dual-key QR system. This process is powered by a patent-pending technology that checks for duplicates, scan history, and geographic anomalies.</p>
-                </div>
-            </div>
-            <div class="register-card card">
-                <div class="card-text">
-                    <h1>Register</h1>
-                    <p>Once verified, register the product in your name with one tap. This gives you digital proof of ownership and access to exclusive rewards, product updates, sales alerts, and more.</p>
-                </div>
-                <div class="card-image">
-                    <img id="register-img" src="images/register-card-img.jpg" alt="Picture of someone typing on a phone">
-                </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn" aria-label="Previous slide"><</button>
+                <button class="carousel-btn next-btn" aria-label="Next slide">></button>
             </div>
         </section>
 
         <h1 class="benefit-header">Benefits</h1>
 
         <section class="benefits-section">
-            <div class="benefit-card">
-                <h3>Benefit</h3>
-                <p>Consumers are aware of your genuinely marked goods and will avoid purchasing a fake.</p>
-                <img id="benefit-card-img" src="images/benefit-card-img.jpg" alt="Picture of a lock">
-            </div>
+            
+                <div class="benefit-card ">
+                    <h3>Benefit</h3>
+                    <p>Consumers are aware of your genuinely marked goods and will avoid purchasing a fake.</p>
+                    <img id="benefit-card-img" src="images/benefit-card-img.jpg" alt="Picture of a lock">
+                </div>
 
-            <div class="engagement-card">
-                <h3>Consumer Engagement</h3>
-                <p>Discounts and pushing notifications to notify them about your next big sale.</p>
-                <img id="engagement-img" src="images/engagement-img.jpg" alt="Picture of a person engaging with a screen">
-            </div>
+                <div class="engagement-card ">
+                    <h3>Consumer Engagement</h3>
+                    <p>Discounts and pushing notifications to notify them about your next big sale.</p>
+                    <img id="engagement-img" src="images/engagement-img.jpg" alt="Picture of a person engaging with a screen">
+                </div>
 
-            <div class="consumer-driven-card">
-                <h3>Consumer Driven</h3>
-                <p>Their new confidence including your genuine products increases your brand credibility and market share.</p>
-                <img id="consumer-driven-img" src="images/consumer-driven-img.jpg" alt="A picture of a person holding shopping bags">
-            </div>
+                <div class="consumer-driven-card ">
+                    <h3>Consumer Driven</h3>
+                    <p>Their new confidence including your genuine products increases your brand credibility and market share.</p>
+                    <img id="consumer-driven-img" src="images/consumer-driven-img.jpg" alt="A picture of a person holding shopping bags">
+                </div>
+            
+
+        <!-- <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn next-btn" aria-label="Next slide">›</button>
+        </div> -->
+    
         </section>
     </main>
 
