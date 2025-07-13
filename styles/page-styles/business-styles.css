@@ -1,0 +1,28 @@
+#code-placement-img, #company-verification-img, #register-img {
+    justify-self: right;
+}
+
+#meeting-img {
+    z-index: 3;
+    top: 175px;
+}
+
+#lost-revenue-img {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+#coin-img {
+    top: 70px;
+    left: 50%;
+    z-index: 2;
+}
+
+#meeting-img, #coin-img, #lost-revenue-img {
+    border-radius: 50%;
+    
+    gap: 20px;
+    
+}
