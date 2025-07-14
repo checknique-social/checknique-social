@@ -6,6 +6,7 @@
     <title>Businesses</title>
     <link rel="stylesheet" href="styles/style.css">
     <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/benefit-carousel.js"></script>
 </head>
 <body>
      <header>
@@ -34,17 +35,19 @@
             <div class="problem-content">
                 <div class="problem-text">
                     <p>Counterfeit products are flooding the global market, costing businesses billions in lost revenue, damaging brand reputation, and reducing consumer trust. Without a reliable way to verify authenticity, both businesses and consumers suffer.</p>
-                    <div class="problem-list">
-                        <ol>
-                            <li>Lost Revenue</li>
-                            <li>Brand Damage</li>
-                            <li>Legal and Operational Costs</li>
-                            <li>Lack of Consumer Insight</li>
-                        </ol>
+                    <div class="problem-container">
+                        <div class="problem-list">
+                            <ol>
+                                <li>Lost Revenue</li>
+                                <li>Brand Damage</li>
+                                <li>Legal and Operational Costs</li>
+                                <li>Lack of Consumer Insight</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
-                <div class="problem-imgs">
+                <div class="problem-imgs-2">
                     <img id="lost-revenue-img" src="images/business-imgs/lost-revenue.jpg" alt="Picture of an image saying lost profit">
                     <img id="coin-img" src="images/business-imgs/coins.jpg" alt="Picture of coins">
                     <img id="meeting-img" src="images/business-imgs/meeting.jpg" alt="Picture of people in a meeting">
@@ -125,6 +128,7 @@
         <h1 class="benefit-header">Benefits</h1>
 
         <section class="benefits-section">
+        <button class="carousel-btn-2 prev-btn-2" aria-label="Previous">‹</button>
             <div class="benefit-card">
                 <h3>Protected anywhere</h3>
                 <p>There’s no need to police distribution chains or worry about your products falling into the wrong hands. </p>
@@ -142,6 +146,7 @@
                 <p>Save time and money on returns of fake goods. Reducing administrative costs.</p>
                 <img id="consumer-driven-img" src="images/business-imgs/time-saving-protection.jpg" alt="A picture of a an hour glass with money symbol inside">
             </div>
+        <button class="carousel-btn-2 next-btn-2" aria-label="Next">›</button>
         </section>
     </main>
 
