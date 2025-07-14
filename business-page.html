@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Businesses</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="js/carousel.js"></script>
 </head>
 <body>
      <header>
@@ -54,67 +55,71 @@
         
         <section class="how-it-works">
             <h1 id="how-it-works-header">How does it work?</h1>
-            <div class="company-verification card">
-                <div class="card-text">
-                    <h1>Step 1: Company Verification</h1>
-                    <p>Like signing up for a passport, every company that will benefit from the Checknique solution needs to be vetted as a company that manufacters authentic products. Apply under the Contact Us section.</p>
+            <div class="slides-container">
+                <div class="company-verification card">
+                    <div class="card-text">
+                        <h1>Step 1: Company Verification</h1>
+                        <p>Like signing up for a passport, every company that will benefit from the Checknique solution needs to be vetted as a company that manufacters authentic products. Apply under the Contact Us section.</p>
+                    </div>
+                    <div class="card-image">
+                        <img id="company-verification-img" src="images/business-imgs/company-verification.jpg" alt="Picture of someone writing with a pen">
+                    </div>    
                 </div>
-                <div class="card-image">
-                    <img id="company-verification-img" src="images/business-imgs/company-verification.jpg" alt="Picture of someone writing with a pen">
-                </div>    
-            </div>
-            <div class="validate-card card">
-                <div class="card-image">
-                    <img id="validate-img" src="images/business-imgs/account-creation.jpg" alt="Picture of a person holding a phone">
+                <div class="validate-card card">
+                    <div class="card-image">
+                        <img id="validate-img" src="images/business-imgs/account-creation.jpg" alt="Picture of a person holding a phone">
+                    </div>
+                    <div class="card-text">    
+                        <h1>Step 2: Account Creation</h1>
+                        <p>Once your company has the green light, a Company Portal login will be created at our B2B website. Login details will then be emailed to the account holder.</p>
+                    </div>
                 </div>
-                <div class="card-text">    
-                    <h1>Step 2: Account Creation</h1>
-                    <p>Once your company has the green light, a Company Portal login will be created at our B2B website. Login details will then be emailed to the account holder.</p>
+                <div class="register-card card">
+                    <div class="card-text">
+                        <h1>Step 3: Add Product UPCs</h1>
+                        <p>To start protecting your products, log into the website and begin adding products that you wish to protect. Information can be added such as product information, image, manuals, ingredients, country of manufacture, UPC code, MSRP, promotional links and prizes etc.</p>
+                    </div>
+                    <div class="card-image">
+                        <img id="register-img" src="images/business-imgs/product-upcs.jpg" alt="Picture of someone typing on a phone">
+                    </div>
                 </div>
-            </div>
-            <div class="register-card card">
-                <div class="card-text">
-                    <h1>Step 3: Add Product UPCs</h1>
-                    <p>To start protecting your products, log into the website and begin adding products that you wish to protect. Information can be added such as product information, image, manuals, ingredients, country of manufacture, UPC code, MSRP, promotional links and prizes etc.</p>
+
+                <div class="order-codes card">
+                    <div class="card-image">
+                        <img id="order-code-img" src="images/business-imgs/order-codes.jpg" alt="Picture boxes with a UPC code">
+                    </div>
+                    <div class="card-text">
+                        <h1>Step 4: Order Codes</h1>
+                        <p>On the B2B website, select the UPC code that you wish to order Checknique codes for and then enter the quantity of codes to generate. An email will be sent to the account holder with the link to download those codes the next day.</p>
+                    </div>
                 </div>
-                <div class="card-image">
-                    <img id="register-img" src="images/business-imgs/product-upcs.jpg" alt="Picture of someone typing on a phone">
+
+                <div class="code-placement card">
+                    <div class="card-text">
+                        <h1>Step 5: Choose Code Placement</h1>
+                        <p>Checknique codes consist of a pair of individually unique QR codes that act as a set of keys (think of them like two different keys to unlock two separate padlocks in order to open a door) to verify authenticity and unlock ownership and registration of products.</p>
+                    </div>
+                    <div class="card-image">
+                        <img id="code-placement-img" src="images/business-imgs/code-placement.jpg" alt="Picture of paint cans with UPC codes">
+                    </div>
+                </div>
+
+
+                <div class="all-set card">
+                    <div class="card-image">
+                        <img id="all-set-img" src="images/business-imgs/all-set.jpg" alt="Picture of a warehouse">
+                    </div>
+                    <div class="card-text">
+                        <h1>You are all set!</h1>
+                        <p>Your products are safe for distribution the moment they leave the production. There’s no need to police distribution chains or worry about your products being counterfeited. Consumers will be able to know which products are really manufactured by your company; building consumer trust and brand loyalty.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="order-codes card">
-                <div class="card-image">
-                    <img id="order-code-img" src="images/business-imgs/order-codes.jpg" alt="Picture boxes with a UPC code">
-                </div>
-                <div class="card-text">
-                    <h1>Step 4: Order Codes</h1>
-                    <p>On the B2B website, select the UPC code that you wish to order Checknique codes for and then enter the quantity of codes to generate. An email will be sent to the account holder with the link to download those codes the next day.</p>
-                </div>
-                
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn" aria-label="Previous slide"><</button>
+                <button class="carousel-btn next-btn" aria-label="Next slide">></button>
             </div>
-
-            <div class="code-placement card">
-                <div class="card-text">
-                    <h1>Step 5: Choose Code Placement</h1>
-                    <p>Checknique codes consist of a pair of individually unique QR codes that act as a set of keys (think of them like two different keys to unlock two separate padlocks in order to open a door) to verify authenticity and unlock ownership and registration of products.</p>
-                </div>
-                <div class="card-image">
-                    <img id="code-placement-img" src="images/business-imgs/code-placement.jpg" alt="Picture of paint cans with UPC codes">
-                </div>
-            </div>
-
-
-            <div class="all-set card">
-                <div class="card-image">
-                    <img id="all-set-img" src="images/business-imgs/all-set.jpg" alt="Picture of a warehouse">
-                </div>
-                <div class="card-text">
-                    <h1>You are all set!</h1>
-                    <p>Your products are safe for distribution the moment they leave the production. There’s no need to police distribution chains or worry about your products being counterfeited. Consumers will be able to know which products are really manufactured by your company; building consumer trust and brand loyalty.</p>
-                </div>
-                
-            </div>
-
         </section>
 
         <h1 class="benefit-header">Benefits</h1>

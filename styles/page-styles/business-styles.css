@@ -26,3 +26,15 @@
     gap: 20px;
     
 }
+
+@media(max-width: 750px) {
+    /* .how-it-works img{
+        align-self: center;
+    } */
+
+    #company-verification-img, #validate-img, 
+    #register-img, #order-code-img, #code-placement-img, 
+    #all-set-img {
+        justify-self: center;
+    }
+}
