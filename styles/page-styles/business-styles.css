@@ -1,40 +1,111 @@
+.problem-imgs-2 {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.problem-imgs-2 img {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 #code-placement-img, #company-verification-img, #register-img {
     justify-self: right;
 }
 
 #meeting-img {
     z-index: 3;
-    top: 175px;
+    top: 30%;
 }
 
 #lost-revenue-img {
-    top: 0;
-    left: 0;
+    top: -25%;
+    left: 25%;
     z-index: 1;
 }
 
 
 #coin-img {
-    top: 70px;
+    top: 25%;
     left: 50%;
     z-index: 2;
 }
 
 #meeting-img, #coin-img, #lost-revenue-img {
+    width: 30%;
     border-radius: 50%;
     
-    gap: 20px;
+    
     
 }
 
+/* Carousel for the benefits section for both consumer and business pages*/
+.carousel-btn-2 {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (max-width:1400px) {
+    #meeting-img, #coin-img, #lost-revenue-img {
+        width: 40%;
+    }
+}
+
 @media(max-width: 750px) {
-    /* .how-it-works img{
-        align-self: center;
-    } */
+   #meeting-img {
+    top: 60%;
+   }
+
+   #coin-img {
+    top: 60%;
+   }
+
+   #lost-revenue-img {
+    top: 10%;
+   }
 
     #company-verification-img, #validate-img, 
     #register-img, #order-code-img, #code-placement-img, 
     #all-set-img {
         justify-self: center;
     }
+
+    .benefits-section {
+    display: block;          /* stack slides */
+    position: relative;      /* for button positioning */
+    overflow: hidden;        /* hide off-screen cards */
+    padding: 20px;           /* you can adjust */
+  }
+
+  /* hide all cards by default… */
+  .benefits-section > div {
+    display: none;
+    width: 100%;
+  }
+
+  /* …but show only the “.active” one */
+  .benefits-section > div.active {
+    display: block;
+  }
+
+  /* show & position buttons */
+  .carousel-btn-2 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .prev-btn-2 { left: 10px; }
+  .next-btn-2 { right: 10px; }
 }
