@@ -52,7 +52,7 @@
       display: flex;
       grid-column: 2/ 4;
       text-align: right;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       padding-right: 20px;
       /* margin-right: 40px; */
@@ -73,6 +73,26 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  header nav a.active {
+    font-weight: 700;
+    border-bottom: 3px solid #6DBB2D;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #login-link {
+    border: 3px solid #6DBB2D;
+    border-radius: 10px;
+    display: flex;
+  width: 132px;
+  height: 37px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   }
 
   body {
@@ -92,15 +112,99 @@
   /* Hero Section */
   .hero {
   position: relative;
-  overflow: hidden;  /* ensure overlay doesn’t spill out */
-  font-family: var(--primary-font);
+  height: 682px; /* Set height to match the Figma banner */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 60px;
+  overflow: hidden;
 }
 
 .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: block;
-  z-index: 1;
+  height: 100%;
+  object-fit: cover; /* ensures it fills without stretching */
+  object-position: center;
+  z-index: 0;
+  opacity: 0.9;
 }
+
+/* Content overlayed on the image */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 60px;
+  color: white;
+  /* margin-top: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-content h1 {
+  color: var(--Neutral-White, #FBFBFB);
+  font-family: "Montserrat";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero-content p {
+  color: var(--Neutral-White, #FBFBFB);
+/* Paragraph/Large */
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */;
+  margin-top: 20px;
+
+  max-width: 474px;
+  height: 115px;
+}
+
+.button-section {
+  margin-top: 30px;
+}
+
+.button-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--Neutral-White, #FBFBFB);
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.business-button {
+  background-color: #6DBB2D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.business-button:hover {
+  background-color: #45a045;
+}
+
 
 /* overlay gradient */
 .hero::before {
@@ -113,6 +217,7 @@
     var(--checknique-color),
     rgba(89, 195, 195, 0.2)
   );
+
   pointer-events: none;
   z-index: 2;       /* sits above the img but below your card */
 }
@@ -180,20 +285,6 @@
     margin: 10px;
     margin-left: 175px;
     /* flex-wrap: wrap; */
-  }
-
-  .consumer-button,
-  .business-button {
-    margin: 10px;
-    color: white;
-    background-color: #4caf50;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
   }
 
   .consumer-button:hover, 
@@ -288,40 +379,124 @@
   
   }
 
+  #download-app{
+    padding-top: 80px;
+    min-height: 640px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+  }
+
+  #download-app h1{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
+  /* Main Header */
+  font-family: 'Montserrat';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-bottom: #3685E3 7px solid;
+  width: 40%;
+  justify-self: center;
+  }
+
+  #download-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+  }
+
+  #app-store {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  #app-store-button {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 231px;
+    height: 56px;
+    background-color: #3685E3;
+    border-radius: 10px;
+    box-shadow: none;
+    color: white;
+  }
+
+  #play-store-button {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 231px;
+    height: 56px;
+    background-color: #3685E3;
+    border-radius: 10px;  
+    color: white;
+    box-shadow: none;
+  }
+
+  #play-store {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+
+  }
+
+  #download-image {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 370px;
+    height: 281px;
+    margin-left: 20px;
+  }
+
+  
+
   /* .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   } */
 
-  footer {
-    color: white;
-    background-color: #7B7B7B;
-    display: grid;
-    grid-template-columns: 1fr 2fr .5fr;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 40px;
-  }
+  /* Default footer styles (desktop) */
+footer {
+  color: white;
+  background-color: #7B7B7B;
+  display: grid;
+  grid-template-columns: 1fr 2fr .5fr;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+}
 
-  footer nav{
-    justify-content: space-between;
-    display: flex;
-    padding-left: 30px;
-    padding-right: 10px;
-    border-left: 2px solid white;
-    height: 79px;
-    align-items: center;
-  }
+footer nav{
+  justify-content: space-between;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 10px;
+  border-left: 2px solid white;
+  height: 79px;
+  align-items: center;
+}
 
-  footer nav a{
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    color: white;
-    text-decoration: none;
-    
-  }
+footer nav a{
+  color: white;
+  text-decoration: none;
+}
 
+#social-media{
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
   /* #vertical-line {
     border-left: 1px solid white;
     height: 79px;
@@ -333,6 +508,27 @@
     justify-content: center;
     gap: 10%;
   }
+}
+@media (max-width: 1000px) {
+  footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 30px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-left: 2px solid white;
+    height: 79px;
+    align-items: center;
+    justify-items: center;
+    }
+
+    footer nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    text-align: center;
+    }
 }
 
 @media (max-width: 750px) {
@@ -364,54 +560,58 @@
     justify-self: right;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .user-buttons {
+  .hero {
     flex-direction: column;
-    gap: 10px;
-    margin: 0 auto;
-  }
-
-  .consumer-button,
-  .business-button {
-    width: 100%;
-    max-width: 250px;
-    /* margin: 0 auto;
-    text-align: center; */
-  }
-
-  .hero-card {
-    grid-row: 1;
-    justify-self: center;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    padding: 20px;
-    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
     background-color: var(--checknique-color);
   }
 
-  .hero {
-    text-align: center;
-  }
-
-  .hero-grid {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-    inset: auto;
-    z-index: 1;
-  }
-
   .hero-image {
-    display: none;
-    /* margin: 0 auto 1rem; */
+    display: none; /* Hides background image on small screens */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    flex: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  }
+
+  .button-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .business-button {
+    width: 100%;
+    max-width: 250px;
+    width: 170px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
   }
 
   .features-grid {
@@ -420,19 +620,77 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .user-type {
-    display: block;
-    grid-row: 2;
-    grid-column: 1;
-    position: static;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--text-dark);
-    margin: 0 auto;
-  }
-
   .hero::before {
  display: none;
 }
+
+  #download-image {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align */
+    text-align: right; /* Left align text */
+    padding: 30px 20px;
+    gap: 20px; /* Add gap between elements */
+  }
   
+  footer h2 {
+    margin: 0;
+    font-size: medium;
+    padding-bottom: 20px;
+    align-self: end;
+  }
+  
+  footer nav {
+    border-left: none; /* Remove left border */
+    padding: 0;
+    height: auto;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-end; /* Left align nav items */
+    gap: 15px; /* Add gap between nav items */
+    width: 100%;
+  }
+  
+  footer nav a {
+    padding: 5px 0; /* Add some vertical padding */
+  }
+  
+  #social-media {
+    padding-top: 10px;
+    justify-content: center; /* Left align social media */
+    align-self: center;
+    gap: 20px; /* Fixed gap instead of percentage */
+  }
+  
+}
+
+@media screen and (max-width: 500px){
+  .features-section {
+    overflow: hidden;
+  }
+  .features-grid {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+  }
+  
+  .feature-card {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .hero-content p {
+    margin-bottom: 40px;
+  }
+
+  header img {
+    max-width: 100%;
+    height: auto;
+  }
 }
