@@ -652,6 +652,7 @@ footer nav a{
     align-items: flex-end; /* Left align nav items */
     gap: 15px; /* Add gap between nav items */
     width: 100%;
+    display: flex;
   }
   
   footer nav a {
