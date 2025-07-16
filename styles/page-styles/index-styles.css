@@ -631,39 +631,50 @@ footer nav a{
   footer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Left align */
-    text-align: right; /* Left align text */
+    align-items: flex-start;
+    text-align: left;
     padding: 30px 20px;
-    gap: 20px; /* Add gap between elements */
+    gap: 20px;
   }
   
   footer h2 {
     margin: 0;
     font-size: medium;
-    padding-bottom: 20px;
-    align-self: end;
+    padding-bottom: 10px;
+    align-self: flex-start;
+    width: 100%;
   }
   
   footer nav {
-    border-left: none; /* Remove left border */
+    border-left: none;
     padding: 0;
     height: auto;
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-end; /* Left align nav items */
-    gap: 15px; /* Add gap between nav items */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     width: 100%;
     display: flex;
   }
   
   footer nav a {
-    padding: 5px 0; /* Add some vertical padding */
+    padding: 3px 0;
+    font-size: 14px;
   }
   
   #social-media {
     padding-top: 10px;
-    justify-content: center; /* Left align social media */
-    align-self: center;
-    gap: 20px; /* Fixed gap instead of percentage */
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80px;
+  }
+  
+  #social-media img {
+    width: 20px !important;
+    height: 20px !important;
   }
   
 }
