@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta
+      name="description"
+      content="Checknique helps you verify your products instantly by scanning unique QR codes, ensuring authenticity and protecting you from counterfeits."
+    />
+    <script src="js/dynamic-menu.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/CheckniqueLogo.png" alt="Image of Checknique's logo" />
+      <button id="menu-button">☰</button>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="consumer-page.html">Consumers</a>
+        <a href="business-page.html">Business</a>
+        <a href="contacus.html" class="active">Contact</a>
+        <a href="#" id="login-link">Login</a>
+      </nav>
+    </header>
+    <main>
+      <div id="headshots">
+        <div class="team-member">
+          <img src="images/hero-img.jpg" alt="Headshot of Alice Smith" />
+          <h3>Alice Smith</h3>
+          <p>Chief Executive Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="images/hero-img.jpg" alt="Headshot of Bob Johnson" />
+          <h3>Bob Johnson</h3>
+          <p>Head of Product</p>
+        </div>
+        <div class="team-member">
+          <img src="images/hero-img.jpg" alt="Headshot of Carol Lee" />
+          <h3>Carol Lee</h3>
+          <p>Lead Developer</p>
+        </div>
+      </div>
+      <div id="divider">
+        <div
+          style="
+            background-color: #2862a9;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+            border-radius: 4px;
+          "
+        >
+          <div style="display: flex; gap: 80px">
+            <div style="display: flex; align-items: flex-start; gap: 16px">
+              <img
+                src="images/phone-call.png"
+                alt="pic of instagram"
+                style="
+                  filter: brightness(0) invert(1);
+                  width: 24px;
+                  height: 24px;
+                "
+              />
+              <div>
+                <strong>Call Us</strong><br />
+                <span style="font-size: 14px">(+1) 435-760-5952</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 16px">
+              <img
+                src="images/time.png"
+                alt="pic of instagram"
+                style="
+                  filter: brightness(0) invert(1);
+                  width: 24px;
+                  height: 24px;
+                "
+              />
+              <div>
+                <strong>Our Working Hours</strong><br />
+                <span style="font-size: 14px"
+                  >Mon - Fri<br />9:00 am - 5:00 pm (PT)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        id="contact-form-section"
+        style="margin: 40px auto; max-width: 400px"
+      >
+        <h2
+          style="
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+          "
+        >
+          Message Us
+        </h2>
+        <form id="contact-form" autocomplete="off">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Name"
+            style="
+              width: 100%;
+              margin-bottom: 16px;
+              background: #ededed;
+              border: none;
+              border-radius: 6px;
+              padding: 12px;
+              font-size: 1rem;
+            "
+          />
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Email"
+            style="
+              width: 100%;
+              margin-bottom: 16px;
+              background: #ededed;
+              border: none;
+              border-radius: 6px;
+              padding: 12px;
+              font-size: 1rem;
+            "
+          />
+
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Subject"
+            style="
+              width: 100%;
+              margin-bottom: 16px;
+              background: #ededed;
+              border: none;
+              border-radius: 6px;
+              padding: 12px;
+              font-size: 1rem;
+            "
+          />
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Message"
+            style="
+              width: 100%;
+              margin-bottom: 16px;
+              background: #ededed;
+              border: none;
+              border-radius: 6px;
+              padding: 12px;
+              font-size: 1rem;
+              resize: vertical;
+            "
+          ></textarea>
+
+          <button
+            type="submit"
+            style="
+              background: #2862a9;
+              color: #fff;
+              padding: 12px 0;
+              width: 100%;
+              border: none;
+              border-radius: 6px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;
+              margin-top: 8px;
+            "
+          >
+            Send
+          </button>
+        </form>
+        <div
+          id="form-status"
+          style="
+            margin-top: 16px;
+            text-align: center;
+            color: #2862a9;
+            font-weight: 500;
+          "
+        ></div>
+      </section>
+      <script>
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("form-status").textContent =
+              "Message sending is not implemented yet.";
+          });
+      </script>
+    </main>
+    <footer>
+      <h2 style="font-size: medium">Copyright &copy; 2025 Checknique LLC</h2>
+      <!-- <div id="vertical-line"></div> -->
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Clientele</a>
+        <a href="#">Download App</a>
+      </nav>
+      <div id="social-media">
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img
+            src="linkedin.png"
+            alt="pic of linkedin"
+            style="filter: brightness(0) invert(1); width: 24px; height: 24px"
+          />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img
+            src="facebook.png"
+            alt="pic of facebook"
+            style="filter: brightness(0) invert(1); width: 24px; height: 24px"
+          />
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <img
+            src="images/twitter.png"
+            alt="pic of twitter"
+            style="filter: brightness(0) invert(1); width: 24px; height: 24px"
+          />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            src="images/instagram.png"
+            alt="pic of instagram"
+            style="filter: brightness(0) invert(1); width: 24px; height: 24px"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
