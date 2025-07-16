@@ -13,6 +13,9 @@
 
 
 /* Hero section */
+h1 {
+  font-size: 30px;
+}
 
 .consumer-hero {
   font-family: var(--primary-font);
@@ -69,6 +72,10 @@
 
 /* Problem section */
 
+.problem-section h1 {
+  font-size: 30px;
+}
+
 .problem-section {
     font-family: var(--primary-font);
     padding: 40px;
@@ -120,6 +127,11 @@
 }
 
 /* Product Section */
+
+.product-section h1 {
+  font-size: 30px;
+}
+
 .product-section {
   font-family: var(--primary-font);  
   display: grid;
@@ -196,6 +208,14 @@
   display: none;
 }
 
+section h1,
+article h1,
+aside h1,
+nav h1 {
+  font-size: 30px;
+}
+
+
 
 /* Text side */
 .card-text h1 {
@@ -219,6 +239,7 @@
 .benefit-header {
     font-family: var(--primary-font);
     text-align: center;
+    font-size: 30px;
 }
 
 .benefits-section {
@@ -267,6 +288,10 @@
 
 /* Media query */ 
 @media (max-width: 750px) {
+  .consumer-hero-img {
+    height: 50%;
+  }
+
   .problem-content {
     grid-template-columns: 1fr;
   }
