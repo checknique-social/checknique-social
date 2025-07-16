@@ -62,3 +62,12 @@
     gap: 20px;
   }
 }
+
+/* Divider section responsive */
+@media (max-width: 750px) {
+  #divider > div > div {
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center;
+  }
+}
